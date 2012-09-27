@@ -109,7 +109,7 @@ function s:PotWikiDir()
 endfunction
 
 function s:PotWikiDefineSyntax()
-  syntax clear
+  " syntax clear
   syntax case match
   execute 'syntax match PotwikiWordNotFound "'.s:wordrx.'"'
 
