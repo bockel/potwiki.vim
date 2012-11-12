@@ -248,7 +248,7 @@ function s:PotWikiBufferMap()
   map <buffer> <silent> <Tab>            <Plug>PotwikiNext
   map <buffer> <silent> <BS>             <Plug>PotwikiPrev
   map <buffer>          <CR>             <Plug>PotwikiCR
-  map <buffer> <silent> <Leader>wc       <Plug>PotwikiClose
+  map <buffer> <silent> <Leader>wq       <Plug>PotwikiClose
   map <buffer> <silent> <Leader>wr       <Plug>PotwikiReload
 endfunction
 
@@ -552,7 +552,7 @@ CONTENT                                                     *potwiki-contents*
 
    The following mappings are present when editing a Wiki file:
 
-   <Leader>wc       - close the file
+   <Leader>wq       - close the file
    <CR>             - follow the WikiWord under the cursor
    <Tab>            - move to the next WikiWord
    <BS>             - move to the previous WikiWord
