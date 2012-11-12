@@ -59,7 +59,6 @@ call s:default('home_dir',fnamemodify(g:potwiki_home,':p:h'))
 call s:default('upper','A-Z')
 call s:default('lower','a-z')
 call s:default('other','0-9_')
-call s:default('nonwiki','!')
 
 call s:default('autowrite',0)
 
@@ -83,9 +82,6 @@ function s:PotWikiInit()
   "least one lower case and another upper case character in that order.
 
   let inner = '['.upp.']['.nlo.']*['.low.']['.nup.']*['.upp.']['.any.']*'
-  if g:potwiki_nonwiki != ""
-     let inner = '['.g:potwiki_nonwiki.']\@<!'.inner
-  endif
   call s:PotWikiBuildIgnore()
   if s:ignorerx != ""
     let s:wordrx = '\C\<\(\('.s:ignorerx.'\)\>\)\@!'.inner.'\>'
